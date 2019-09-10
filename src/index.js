@@ -12,7 +12,7 @@ class Card extends React.Component {
             <h4 className="card-title">{this.props.productName}</h4>
             Price: <strong>{this.props.price}</strong>
             <p className="card-text">{this.props.desc}</p>
-            <a href="#" className="btn btn-primary">Buy</a>
+            <a href="/#" className="btn btn-primary">Buy</a>
           </div>
         </div>
       </div>
