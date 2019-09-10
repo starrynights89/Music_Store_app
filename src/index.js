@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+// Card format for each item
 class Card extends React.Component {
   render() {
     return (
@@ -19,6 +20,7 @@ class Card extends React.Component {
   }
 }
 
+// Class contains Card class
 class CardContainer extends React.Component {
   constructor(props) {
     // pass props to the parent component
@@ -41,6 +43,7 @@ class CardContainer extends React.Component {
   }
   render() {
     const cards = this.state.cards;
+    // Map out all card ID's from cards.json
     let items = cards.map(
       card => <Card key={card.id} {...card} />
     )
