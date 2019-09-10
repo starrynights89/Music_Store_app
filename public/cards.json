@@ -14,14 +14,14 @@
   "productname" : "Red Guitar"
 }, {
   "id" : 3,
-  "img" : "img/drums.png",
+  "img" : "img/drums.jpg",
   "imgalt":"drums",
   "desc":"A set of super awesome drums!!",
   "price" : 17000.0,
   "productname" : "Drums"
 }, {
   "id" : 4,
-  "img" : "img/flute.png",
+  "img" : "img/flute.jpeg",
   "imgalt":"flute",
   "desc":"A very nice flute combined with some super nice musical notes!!",
   "price" : 210.0,
