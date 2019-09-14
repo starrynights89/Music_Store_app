@@ -13,7 +13,8 @@ class Card extends React.Component {
             <h4 className="card-title">{this.props.productname}</h4>
             Price: <strong className={priceColor}>{sellPrice}</strong>
             <p className="card-text">{this.props.desc}</p>
-            <a className="btn btn-success text-white" onClick={()=>{this.props.showBuyModal(this.props.ID,sellPrice)}}>Buy</a>
+            <a className="btn btn-success text-white" 
+              onClick={()=>{this.props.showBuyModal(this.props.ID,sellPrice);}}>Buy</a>
           </div>
         </div>
       </div>
@@ -49,9 +50,8 @@ export default class CardContainer extends React.Component {
       card => <Card key={card.id} {...card} promo={this.props.promo} showBuyModal={this.props.showBuyModal} />
     );
     return (
-      <div className='container pt-4'>
-        <h3 className='text-center text-primary'>Products</h3>
-        <div className="pt-4 row">
+      <div>
+        <div className="mt-5 row">
           {items}
         </div>
       </div>
