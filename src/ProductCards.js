@@ -13,7 +13,7 @@ class Card extends React.Component {
             <h4 className="card-title">{this.props.productname}</h4>
             Price: <strong className={priceColor}>{sellPrice}</strong>
             <p className="card-text">{this.props.desc}</p>
-            <a className="btn btn-success text-white" 
+            <a href="#/" className="btn btn-success text-white" 
               onClick={()=>{this.props.showBuyModal(this.props.ID,sellPrice);}}>Buy</a>
           </div>
         </div>
