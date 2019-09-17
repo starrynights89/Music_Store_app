@@ -15,6 +15,13 @@ class CreditCardForm extends React.Component {
   }
 
   renderCreditCardInformation() {
+    const style = {
+      base: {
+        'fontSize': '20px',
+        'color': '#495057',
+        'fontFamily': 'apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      }
+    };
     const usersavedcard = <div>
       <div className="form-row text-center">
         <button type="button" className="btn btn-outline-success text-center mx-auto">Use saved card?</button>
@@ -29,6 +36,30 @@ class CreditCardForm extends React.Component {
       </label>
     </div>;
     // return the view
+    return (
+      <div>
+        {usersavedcard}
+        <h5 className="mb-4">Payment Info</h5>
+        <form>
+          <div className="form-row">
+            <div className="col-lg-12 form-group">
+              <label htmlFor="cc-name">Name On Card:</label>
+              <input id="cc-name" name='cc-name' className="form-control" placeholder='Name on Card'
+                onChange={this.handleInputChange} type='text' />
+            </div>
+          </div>
+          <div className="form-row">
+            <div className="col-lg-12 form-group">
+              <label htmlFor="card">Card Information:</label>
+              <CardElement id="card" className="form-control" style={style} />
+            </div> 
+          </div>
+          {remembercardcheck}
+          <hr className="mb-4" />
+          <button type="submit" className="btn btn-success btn-large">{this.props.operation}</button>
+        </form>
+      </div>
+    );
   }
   
   renderSuccess() {}
