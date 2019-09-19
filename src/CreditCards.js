@@ -40,7 +40,7 @@ class CreditCardForm extends React.Component {
       <div>
         {usersavedcard}
         <h5 className="mb-4">Payment Info</h5>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <div className="form-row">
             <div className="col-lg-12 form-group">
               <label htmlFor="cc-name">Name On Card:</label>
@@ -62,8 +62,24 @@ class CreditCardForm extends React.Component {
     );
   }
   
-  renderSuccess() {}
-  renderFailure() {}
+  renderSuccess() {
+    return (
+      <div>
+        <h5 className="mb-4 text-success">Request Successful....</h5>
+        <button type="submit" className="btn btn-success btn-large" 
+          onClick={() => { this.props.toggle(); }}>Ok</button>
+      </div>
+    );
+  }
+
+  renderFailure() {
+    return (
+      <div>
+        <h5 className="mb-4 text-danger">Credit card information invalid, try again or exit</h5>
+        {this.renderCreditCardInformation}
+      </div>
+    );
+  }
 
   render() {
     let body = null;
