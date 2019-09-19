@@ -68,7 +68,7 @@ class SignInForm extends React.Component {
 }
 
 // Registration form
-class Registration extends React.Component {
+class RegistrationForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -145,6 +145,29 @@ export class SignInModalWindow extends React.Component {
     this.setState({
       showRegistrationForm: true
     });
+  }
+
+  render() {
+    let modalBody = <SignInForm handleNewUser={this.handleNewUser} />;
+    if (this.state.showRegistrationForm === true) {
+      modalBody = <RegistrationForm />;
+    }
+
+    return (
+      <Modal id="register" tabIndex="-1" role="dialog" isOpen={this.props.showModal} toggle={this.props.toggle}>
+        <div role="document">
+          <ModalHeader toggle={this.props.toggle} className="bg-success text-white">
+            Sign in
+            {/*<button className="close">
+                <span aria-hidden="true">&times;</span>
+              </button>*/}
+          </ModalHeader>
+          <ModalBody>
+            {modalBody}
+          </ModalBody>
+        </div>
+      </Modal>
+    );
   }
 }
 
