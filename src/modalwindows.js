@@ -173,7 +173,7 @@ export class SignInModalWindow extends React.Component {
 
 export function BuyModalWindow(props) {
   return (
-    <Modal id="buy" tabIndex="-1" role="dialog" isOpen={this.props.showModal} toggle={props.toggle}>
+    <Modal id="buy" tabIndex="-1" role="dialog" isOpen={props.showModal} toggle={props.toggle}>
       <div role="document">
         <ModalHeader toggle={props.toggle} className="bg-success text-white">
           Buy Item
