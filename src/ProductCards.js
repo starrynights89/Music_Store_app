@@ -4,7 +4,7 @@ import React from 'react';
 class Card extends React.Component {
   render() {
     const priceColor = (this.props.promo)? 'text-danger' : 'text-dark';
-    const sellPrice = (this.props.promo)?this.props.promotion:this.props.price;
+    const sellPrice = (this.props.promo)? this.props.promotion:this.props.price;
     return (
       <div className="col-md-6 col-lg-4 d-flex align-items-stretch">
         <div className="card mb-3">

@@ -3,14 +3,14 @@
   "img" : "img/drums.jpg",
   "imgalt":"drums",
   "desc":"A set of super awesome drums, combined with a guitar, they can product more than amazing music!!",
-  "price" : 17000.0,
+  "price" : 15000.0,
   "productname" : "Drums"
 },{
   "id" : 4,
   "img" : "img/flute.jpeg",
   "imgalt":"flute",
   "desc":"A super nice flute combined with some super nice musical notes!!",
-  "price" : 210.0,
+  "price" : 200.0,
   "productname" : "Flute"
 },{
   "id" : 5,
